@@ -1,0 +1,3 @@
+>add-migration "Create_table_cursos"
+>Update-Database -Verbose
+>Script-Migration
