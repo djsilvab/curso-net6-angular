@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LinqSnippets;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ namespace MyFirstBackend.Controllers
 
         public ChaptersController(UniversityDbContext context)
         {
+            Snippets.Main();
             _context = context;
         }
 
