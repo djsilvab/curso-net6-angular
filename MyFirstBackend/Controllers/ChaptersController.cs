@@ -19,18 +19,36 @@ namespace MyFirstBackend.Controllers
 
         public ChaptersController(UniversityDbContext context)
         {
-            Snippets.Main();
+            //var srvColegio = new Services.SrvColegio();
+            //try
+            //{
+            //    var courses = new List<Curso>
+            //    {
+            //        new Curso{ Id = 1, Nombre = "Curso 1", DescripcionCorta = "xxx", DescripcionLarga = "yyy" },
+            //        new Curso{ Id = 2, Nombre = "Curso 2", DescripcionCorta = "xxx", DescripcionLarga = "yyy" },
+            //        new Curso{ Id = 3, Nombre = "Curso 3", DescripcionCorta = "xxx", DescripcionLarga = "yyy" }
+            //    };
+            //    var result = srvColegio.FindCoursesWithoutStudents(courses);
+            //}
+            //catch(Exception ex)
+            //{
+            //    var message = ex.Message;
+            //}            
+
+            Snippets.ZipLinq();
             _context = context;
+           
         }
 
         // GET: api/Chapters
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Chapter>>> GetChapters()
         {
-          if (_context.Chapters == null)
-          {
-              return NotFound();
-          }
+            if (_context.Chapters == null)
+            {
+                return NotFound();
+            }
+
             return await _context.Chapters.ToListAsync();
         }
 
