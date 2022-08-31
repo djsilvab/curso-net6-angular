@@ -25,13 +25,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //5. CORS Configuration
-builder.Services.AddCors(options => {
-    options.AddPolicy(name: "CorsPolicy", builder => {
-        builder.AllowAnyOrigin();
-        builder.AllowAnyMethod();
-        builder.AllowAnyHeader();
-    });
-});
+builder.Services.AddCors();
+//builder.Services.AddCors(options => {
+//    options.AddPolicy(name: "CorsPolicy", builder => {
+//        builder.AllowAnyOrigin();
+//        builder.AllowAnyMethod();
+//        builder.AllowAnyHeader();
+//    });
+//});
 
 var app = builder.Build();
 
@@ -49,6 +50,10 @@ app.UseAuthorization();
 app.MapControllers();
 
 //6. Tell app to use CORS
-app.UseCors("CorsPolicy");
+//app.UseCors("CorsPolicy");
+app.UseCors(builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());                        
 
 app.Run();
