@@ -34,17 +34,20 @@ namespace MyFirstBackend.Controllers
             {
                 var Token = new UserTokens();
 
-                var valid = Logins.Any(x => x.FirstName.Equals(userLogin.Username, StringComparison.OrdinalIgnoreCase));
+                var searchUser = _context.Users?.FirstOrDefault(x => x.FirstName.Equals(userLogin.Username) && x.Password.Equals(userLogin.Password));
 
-                if (valid)
+                //var valid = Logins.Any(x => x.FirstName.Equals(userLogin.Username, StringComparison.OrdinalIgnoreCase));
+                //Console.WriteLine("User found", user);
+
+                if (searchUser != null)
                 {
-                    var user = Logins.FirstOrDefault(x => x.FirstName.Equals(userLogin.Username, StringComparison.OrdinalIgnoreCase));
+                    //var user = Logins.FirstOrDefault(x => x.FirstName.Equals(userLogin.Username, StringComparison.OrdinalIgnoreCase));
 
                     Token = JwtHelpers.GenTokenKey(
                         new UserTokens { 
-                            EmailId = user.Email,
-                            Username = user.FirstName,
-                            Id = user.Id,
+                            EmailId = searchUser.Email,
+                            Username = searchUser.FirstName,
+                            Id = searchUser.Id,
                             GuidId = Guid.NewGuid(),
                         },
                         _jwtSettings

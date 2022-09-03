@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstBackend", "MyFirstBackend\MyFirstBackend.csproj", "{B10EE3DC-5FF4-4D50-9266-E84AED523778}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqSnippets", "LinqSnippets\LinqSnippets.csproj", "{BCFB7E4A-49E0-4C30-9267-A21EF562C0F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqSnippets", "LinqSnippets\LinqSnippets.csproj", "{BCFB7E4A-49E0-4C30-9267-A21EF562C0F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternacionalAPI", "InternacionalAPI\InternacionalAPI.csproj", "{FABA2CFB-3A44-48C1-BFDC-B51E8019A6D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BCFB7E4A-49E0-4C30-9267-A21EF562C0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCFB7E4A-49E0-4C30-9267-A21EF562C0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCFB7E4A-49E0-4C30-9267-A21EF562C0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FABA2CFB-3A44-48C1-BFDC-B51E8019A6D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABA2CFB-3A44-48C1-BFDC-B51E8019A6D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABA2CFB-3A44-48C1-BFDC-B51E8019A6D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABA2CFB-3A44-48C1-BFDC-B51E8019A6D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

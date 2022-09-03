@@ -22,6 +22,7 @@ namespace MyFirstBackend.Extensions
             }).AddJwtBearer(options => {
                 options.RequireHttpsMetadata = false;
                 options.SaveToken = true;
+                //options.Authority = "";
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = jwtSettings.ValidateIssuerSigningKey,
