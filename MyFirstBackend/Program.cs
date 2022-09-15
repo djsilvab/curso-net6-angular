@@ -5,8 +5,19 @@ using MyFirstBackend.Services;
 using MyFirstBackend.Services.Contracts;
 using MyFirstBackend.Extensions;
 using Microsoft.OpenApi.Models;
+//10. Use Serilog to log events
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//11. Config Serilog
+builder.Host.UseSerilog((hostBuilderCtx, logger) =>
+{
+    logger
+        .WriteTo.Console()
+        .WriteTo.Debug()
+        .ReadFrom.Configuration(hostBuilderCtx.Configuration);
+});
 
 //2: Connection with SQL Server
 const string connectionName = "UniversityDB";
@@ -85,6 +96,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//12. Tell app to use Serilog
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqSnippets", "LinqSnippet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternacionalAPI", "InternacionalAPI\InternacionalAPI.csproj", "{FABA2CFB-3A44-48C1-BFDC-B51E8019A6D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VersionControlAPI", "VersionControlAPI\VersionControlAPI.csproj", "{A8DEDB9B-CA1C-4F07-9D35-579208E9C902}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VersionControlAPI", "VersionControlAPI\VersionControlAPI.csproj", "{A8DEDB9B-CA1C-4F07-9D35-579208E9C902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAsync", "DemoAsync\DemoAsync.csproj", "{ADFE700E-8B23-4497-B2AD-F4D5674AEBB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A8DEDB9B-CA1C-4F07-9D35-579208E9C902}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8DEDB9B-CA1C-4F07-9D35-579208E9C902}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8DEDB9B-CA1C-4F07-9D35-579208E9C902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADFE700E-8B23-4497-B2AD-F4D5674AEBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADFE700E-8B23-4497-B2AD-F4D5674AEBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADFE700E-8B23-4497-B2AD-F4D5674AEBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFE700E-8B23-4497-B2AD-F4D5674AEBB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
